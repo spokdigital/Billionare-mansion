@@ -2,14 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Billionaire Mansion — Luxury Interiors UAE</title>
-<script src="./vendor/react.js"></script>
-<script src="./vendor/react-dom.js"></script>
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Billionaire Mansion | Luxury Villa, Apartment &amp; Kitchen Renovation in Dubai &amp; UAE</title>
+<meta name="description" content="Turnkey luxury interiors in Dubai and the UAE: villa and apartment renovation, bespoke kitchens, wall panelling, construction and fit-out. Book a free design consultation.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <style>
@@ -37,29 +33,72 @@ a{color:#CDB38A}a:hover{color:#E6D2AE}
 .btn-gold{background:#C2A274;color:#15120F;text-decoration:none}
 .btn-gold:hover{background:#D4B78A;color:#15120F}
 .mbar{display:none}
+.hdr-cta{white-space:nowrap}
+.call-sm{display:none}
+.lbl-sm{display:none}
+.swipe-hint{display:none}
 @media (max-width:1000px){
 .hero-grid,.why-grid,.faq-grid{grid-template-columns:minmax(0,1fr);gap:40px}
 .svc-grid,.proof-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 .reel-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 .steps{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:32px}
 .nav-links{display:none}
+.hero-img{object-position:center 85% !important}
+.hero-pad{padding-top:48px !important;padding-bottom:56px !important}
+.wa-float{display:none !important}
+.mbar{display:flex}
 }
 @media (max-width:640px){
+.hdr{height:64px !important;gap:10px !important}
+.logo{height:28px !important}
+.hdr-cta{padding:0 16px !important;font-size:13px !important}
+.lbl-lg{display:none}
+.lbl-sm{display:inline}
+.call-sm{display:inline-flex}
+.hero-img{object-position:center 85% !important}
+.hero-pad{padding-top:36px !important;padding-bottom:40px !important}
+.hero-grid{gap:32px}
+.hero-copy{gap:20px !important}
+.hero-h1{font-size:40px !important;line-height:1.06 !important}
+.hero-sub{font-size:16px !important}
+.hero-ctas a{flex:1 1 100%;justify-content:center}
+.trust{flex-direction:column;gap:8px !important;padding-top:16px !important}
+.form-card{padding:24px 20px !important;scroll-margin-top:76px !important}
+.sec{padding-top:64px !important;padding-bottom:64px !important}
+.sec-inner{gap:32px !important}
+.svc-grid,.reel-grid{display:flex !important;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:16px;gap:12px !important;margin:0 -16px;padding:0 16px 6px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.svc-grid::-webkit-scrollbar,.reel-grid::-webkit-scrollbar{display:none}
+.svc-grid>*{flex:0 0 84%;scroll-snap-align:start;min-height:0 !important}
+.reel-grid>*{flex:0 0 66%;scroll-snap-align:start}
+.svc-img{height:220px !important}
+.swipe-hint{display:flex !important}
+.why-img{aspect-ratio:4 / 3 !important}
 .wrap{padding:0 16px}
 .svc-grid,.proof-grid,.steps,.form-row{grid-template-columns:minmax(0,1fr)}
 .hide-sm{display:none !important}
 .mbar{display:flex}
 }
+
+.chip{background:#FFFFFF;color:#1B1714;border:1px solid #D9D0C3}
+.chip .tick{display:none}
+.chip[aria-pressed="true"]{background:#15120F;color:#F5F1EA;border-color:#15120F}
+.chip[aria-pressed="true"] .tick{display:inline}
+[hidden]{display:none !important}
+html{scroll-behavior:smooth}
+@media print{header{position:static !important}.mbar,.wa-float{display:none !important}}
 </style>
-</helmet>
+
+</head>
+<body>
+
 
 <div style="width: 100%; background: #15120F; color: #F5F1EA; font-family: Manrope, system-ui, sans-serif; font-size: 16px; line-height: 1.6">
 
 <!-- NAV -->
 <header style="position: sticky; top: 0; z-index: 20; background: rgba(21,18,15,0.92); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(245,241,234,0.08)">
-<div class="wrap" style="height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 24px">
+<div class="wrap hdr" style="height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 24px">
 <a href="#top" aria-label="Billionaire Mansion home" style="display: flex; align-items: center; min-height: 44px">
-<img src="./assets/2c52fdaf080f8900bb292bafacdf7227.png" alt="Billionaire Mansion" style="height: 36px; width: auto; display: block">
+<img src="media/logo-white.png" alt="Billionaire Mansion" class="logo" style="height: 36px; width: auto; display: block">
 </a>
 <nav class="nav-links" aria-label="Primary" style="font-size: 14px; font-weight: 500">
 <a href="#services" style="color: #D9D0C3; text-decoration: none">Services</a>
@@ -67,30 +106,33 @@ a{color:#CDB38A}a:hover{color:#E6D2AE}
 <a href="#process" style="color: #D9D0C3; text-decoration: none">Process</a>
 <a href="#faq" style="color: #D9D0C3; text-decoration: none">FAQ</a>
 </nav>
-<div style="display: flex; align-items: center; gap: 12px">
+<div style="display: flex; align-items: center; gap: 10px">
 <a class="hide-sm" href="tel:+971529127192" style="display: inline-flex; align-items: center; gap: 8px; color: #F5F1EA; text-decoration: none; font-size: 14px; font-weight: 600; min-height: 44px">
 <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#CDB38A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"></path></svg>
 +971 52 912 7192
 </a>
-<a href="#quote" class="btn-gold" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; font-size: 14px; font-weight: 700; letter-spacing: 0.02em; border-radius: 2px">Free consultation</a>
+<a href="tel:+971529127192" class="call-sm" aria-label="Call +971 52 912 7192" style="width: 44px; height: 44px; align-items: center; justify-content: center; border: 1px solid rgba(245,241,234,0.3); border-radius: 2px; color: #CDB38A">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"></path></svg>
+</a>
+<a href="#quote" class="btn-gold hdr-cta" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; font-size: 14px; font-weight: 700; letter-spacing: 0.02em; border-radius: 2px"><span class="lbl-lg">Free consultation</span><span class="lbl-sm">Free quote</span></a>
 </div>
 </div>
 </header>
 
 <!-- HERO -->
 <section id="top" style="position: relative; overflow: hidden">
-<img src="./assets/f82c3796fed61b30acb8d2c88356cb97.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 60%">
+<img src="media/kitchen.jpg" alt="" class="hero-img" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 60%">
 <div aria-hidden="true" style="position: absolute; inset: 0; background: rgba(16,13,10,0.74)"></div>
-<div class="wrap" style="position: relative; padding-top: 88px; padding-bottom: 96px">
+<div class="wrap hero-pad" style="position: relative; padding-top: 88px; padding-bottom: 96px">
 <div class="hero-grid">
-<div style="display: flex; flex-direction: column; gap: 28px">
+<div class="hero-copy" style="display: flex; flex-direction: column; gap: 28px">
 <div style="display: inline-flex; align-items: center; gap: 12px; font-size: 12px; letter-spacing: 0.28em; color: #CDB38A; font-weight: 600">
 <span style="width: 40px; height: 1px; background: #CDB38A"></span>
 LUXURY INTERIORS · DUBAI &amp; UAE
 </div>
-<h1 class="serif" style="margin: 0; font-size: clamp(46px, 6vw, 86px); line-height: 1.02; font-weight: 400; letter-spacing: -0.01em">Your villa, <em style="color: #CDB38A">reimagined</em> to the last millimetre.</h1>
-<p style="margin: 0; max-width: 540px; font-size: 18px; color: #D9D0C3">Turnkey renovation for villas and apartments: design, construction, bespoke kitchens and wall panelling, delivered by one team under one contract.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<h1 class="serif hero-h1" style="margin: 0; font-size: clamp(46px, 6vw, 86px); line-height: 1.02; font-weight: 400; letter-spacing: -0.01em">Your villa, <em style="color: #CDB38A">reimagined</em> to the last millimetre.</h1>
+<p class="hero-sub" style="margin: 0; max-width: 540px; font-size: 18px; color: #D9D0C3">Turnkey renovation for villas and apartments: design, construction, bespoke kitchens and wall panelling, delivered by one team under one contract.</p>
+<div class="hero-ctas" style="display: flex; flex-wrap: wrap; gap: 12px">
 <a href="#quote" class="btn-gold" style="display: inline-flex; align-items: center; gap: 10px; min-height: 56px; padding: 0 28px; font-size: 15px; font-weight: 700; border-radius: 2px">Book a free site visit
 <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
 </a>
@@ -98,7 +140,7 @@ LUXURY INTERIORS · DUBAI &amp; UAE
 <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.8 1.8 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zm8.4-18.2C18.1 1.3 15.2.1 12 .1 5.5.1.1 5.4.1 12c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.6c1.7.9 3.7 1.4 5.7 1.4 6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.5-8.3z"></path></svg>
 Chat on WhatsApp</a>
 </div>
-<div style="display: flex; flex-wrap: wrap; gap: 28px; padding-top: 20px; border-top: 1px solid rgba(245,241,234,0.14); font-size: 14px; color: #D9D0C3">
+<div class="trust" style="display: flex; flex-wrap: wrap; gap: 28px; padding-top: 20px; border-top: 1px solid rgba(245,241,234,0.14); font-size: 14px; color: #D9D0C3">
 <div style="display: flex; align-items: center; gap: 10px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#CDB38A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Free site visit &amp; 3D concept</div>
 <div style="display: flex; align-items: center; gap: 10px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#CDB38A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Fixed, itemised quotation</div>
 <div style="display: flex; align-items: center; gap: 10px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#CDB38A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>In-house joinery &amp; build team</div>
@@ -106,9 +148,9 @@ Chat on WhatsApp</a>
 </div>
 
 <!-- LEAD FORM -->
-<div id="quote" style="background: #F5F1EA; color: #1B1714; border-radius: 4px; padding: 36px; box-shadow: 0 30px 80px rgba(0,0,0,0.45); scroll-margin-top: 100px">
-<sc-if value="{{notSubmitted}}" hint-placeholder-val="{{ true }}">
-<form onSubmit="{{submit}}" novalidate="novalidate" style="display: flex; flex-direction: column; gap: 18px">
+<div id="quote" class="form-card" style="background: #F5F1EA; color: #1B1714; border-radius: 4px; padding: 36px; box-shadow: 0 30px 80px rgba(0,0,0,0.45); scroll-margin-top: 100px">
+<div id="formState">
+<form id="leadForm" novalidate="novalidate" style="display: flex; flex-direction: column; gap: 18px">
 <div style="display: flex; flex-direction: column; gap: 6px">
 <h2 class="serif" style="margin: 0; font-size: 34px; line-height: 1.1; font-weight: 500">Get your free design consultation</h2>
 <p style="margin: 0; font-size: 14px; color: #5E554B">Tell us about your space. A senior designer calls you back within 24 hours.</p>
@@ -116,35 +158,36 @@ Chat on WhatsApp</a>
 <fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px">
 <legend style="font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #5E554B; font-weight: 600; padding: 0; margin-bottom: 10px">What do you need? <span style="text-transform: none; letter-spacing: 0; font-weight: 500">(select all that apply)</span></legend>
 <div style="display: flex; flex-wrap: wrap; gap: 8px">
-<sc-for list="{{services}}" as="s" hint-placeholder-count="5">
-<button type="button" class="chip" onClick="{{s.toggle}}" aria-pressed="{{s.pressed}}" style="{{s.chipStyle}}">
-<sc-if value="{{s.selected}}" hint-placeholder-val="{{ false }}"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></sc-if>
-{{s.short}}</button>
-</sc-for>
+<button type="button" class="chip" data-svc="villa" aria-pressed="false"><svg aria-hidden="true" class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Villa renovation</button>
+<button type="button" class="chip" data-svc="apartment" aria-pressed="false"><svg aria-hidden="true" class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Apartment renovation</button>
+<button type="button" class="chip" data-svc="kitchen" aria-pressed="false"><svg aria-hidden="true" class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Kitchen</button>
+<button type="button" class="chip" data-svc="panelling" aria-pressed="false"><svg aria-hidden="true" class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Wall panelling</button>
+<button type="button" class="chip" data-svc="construction" aria-pressed="false"><svg aria-hidden="true" class="tick" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Construction</button>
+
 </div>
-<sc-if value="{{errors.service}}" hint-placeholder-val="{{ false }}"><span role="alert" style="font-size: 13px; color: #A3361F; font-weight: 600">Please choose at least one service.</span></sc-if>
+<span data-err="service" hidden role="alert" style="font-size: 13px; color: #A3361F; font-weight: 600">Please choose at least one service.</span>
 </fieldset>
 <div class="fld">
 <label for="f-name">Full name</label>
-<input id="f-name" type="text" autocomplete="name" placeholder="Your name" value="{{name}}" onChange="{{onName}}">
-<sc-if value="{{errors.name}}" hint-placeholder-val="{{ false }}"><span role="alert" style="font-size: 13px; color: #A3361F; font-weight: 600">Please enter your name.</span></sc-if>
+<input id="f-name" type="text" autocomplete="name" placeholder="Your name">
+<span data-err="name" hidden role="alert" style="font-size: 13px; color: #A3361F; font-weight: 600">Please enter your name.</span>
 </div>
 <div class="form-row">
 <div class="fld">
 <label for="f-phone">Phone / WhatsApp</label>
-<input id="f-phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+971 50 123 4567" value="{{phone}}" onChange="{{onPhone}}">
-<sc-if value="{{errors.phone}}" hint-placeholder-val="{{ false }}"><span role="alert" style="font-size: 13px; color: #A3361F; font-weight: 600">Enter a valid number.</span></sc-if>
+<input id="f-phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+971 50 123 4567">
+<span data-err="phone" hidden role="alert" style="font-size: 13px; color: #A3361F; font-weight: 600">Enter a valid number.</span>
 </div>
 <div class="fld">
 <label for="f-email">Email</label>
-<input id="f-email" type="email" autocomplete="email" placeholder="you@email.com" value="{{email}}" onChange="{{onEmail}}">
-<sc-if value="{{errors.email}}" hint-placeholder-val="{{ false }}"><span role="alert" style="font-size: 13px; color: #A3361F; font-weight: 600">Enter a valid email.</span></sc-if>
+<input id="f-email" type="email" autocomplete="email" placeholder="you@email.com">
+<span data-err="email" hidden role="alert" style="font-size: 13px; color: #A3361F; font-weight: 600">Enter a valid email.</span>
 </div>
 </div>
 <div class="form-row">
 <div class="fld">
 <label for="f-city">Property location</label>
-<select id="f-city" value="{{city}}" onChange="{{onCity}}">
+<select id="f-city">
 <option value="Dubai">Dubai</option>
 <option value="Abu Dhabi">Abu Dhabi</option>
 <option value="Sharjah">Sharjah</option>
@@ -155,8 +198,8 @@ Chat on WhatsApp</a>
 </div>
 <div class="fld">
 <label for="f-budget">Budget (optional)</label>
-<select id="f-budget" value="{{budget}}" onChange="{{onBudget}}">
-<option value="">Not sure yet</option>
+<select id="f-budget">
+<option value="" selected>Not sure yet</option>
 <option value="&lt;100k">Under AED 100k</option>
 <option value="100-300k">AED 100k – 300k</option>
 <option value="300k-1m">AED 300k – 1M</option>
@@ -171,14 +214,14 @@ Chat on WhatsApp</a>
 <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>
 No spam. Your details are only used to arrange your consultation.</p>
 </form>
-</sc-if>
-<sc-if value="{{submitted}}" hint-placeholder-val="{{ false }}">
+</div>
+<div id="thanksState" hidden>
 <div role="status" style="display: flex; flex-direction: column; gap: 18px; padding: 24px 0">
 <div style="width: 56px; height: 56px; border-radius: 50%; background: #15120F; display: flex; align-items: center; justify-content: center">
 <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#CDB38A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
 </div>
-<h2 class="serif" style="margin: 0; font-size: 36px; line-height: 1.1; font-weight: 500">Thank you, {{firstName}}.</h2>
-<p style="margin: 0; color: #5E554B">We have your request for <strong style="color: #1B1714">{{chosenList}}</strong>. A senior designer will call you on {{phone}} within 24 hours to book your site visit.</p>
+<h2 class="serif" style="margin: 0; font-size: 36px; line-height: 1.1; font-weight: 500">Thank you, <span id="tFirst"></span>.</h2>
+<p style="margin: 0; color: #5E554B">We have your request for <strong style="color: #1B1714"><span id="tList"></span></strong>. A senior designer will call you on <span id="tPhone"></span> within 24 hours to book your site visit.</p>
 <div style="margin-top: 6px; padding: 22px; background: #FFFFFF; border: 1px solid #E4DCD0; display: flex; flex-direction: column; gap: 14px">
 <div style="display: flex; align-items: center; gap: 12px">
 <span style="width: 40px; height: 40px; border-radius: 50%; background: #25D366; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.8 1.8 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zm8.4-18.2C18.1 1.3 15.2.1 12 .1 5.5.1.1 5.4.1 12c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.6c1.7.9 3.7 1.4 5.7 1.4 6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.5-8.3z"></path></svg></span>
@@ -187,19 +230,19 @@ No spam. Your details are only used to arrange your consultation.</p>
 <span style="font-size: 13px; color: #5E554B">Send us a WhatsApp message and we’ll reply right away.</span>
 </div>
 </div>
-<a href="{{waLead}}" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; background: #0E7A4C; color: #FFFFFF; text-decoration: none; font-weight: 700; font-size: 15px; border-radius: 2px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.8 1.8 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zm8.4-18.2C18.1 1.3 15.2.1 12 .1 5.5.1.1 5.4.1 12c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.6c1.7.9 3.7 1.4 5.7 1.4 6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.5-8.3z"></path></svg>Message us on WhatsApp</a>
+<a id="waLead" href="https://wa.me/971529127192" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; background: #0E7A4C; color: #FFFFFF; text-decoration: none; font-weight: 700; font-size: 15px; border-radius: 2px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.8 1.8 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zm8.4-18.2C18.1 1.3 15.2.1 12 .1 5.5.1.1 5.4.1 12c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.6c1.7.9 3.7 1.4 5.7 1.4 6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.5-8.3z"></path></svg>Message us on WhatsApp</a>
 <span style="font-size: 12px; color: #5E554B; text-align: center">+971 52 912 7192 · Your details are pre-filled in the message</span>
 </div>
 </div>
-</sc-if>
+</div>
 </div>
 </div>
 </div>
 </section>
 
 <!-- SERVICES -->
-<section id="services" style="background: #F5F1EA; color: #1B1714; padding: 120px 0; scroll-margin-top: 80px">
-<div class="wrap" style="display: flex; flex-direction: column; gap: 56px">
+<section id="services" class="sec" style="background: #F5F1EA; color: #1B1714; padding: 120px 0; scroll-margin-top: 80px">
+<div class="wrap sec-inner" style="display: flex; flex-direction: column; gap: 56px">
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
 <div style="display: flex; flex-direction: column; gap: 16px; max-width: 640px">
 <span style="font-size: 12px; letter-spacing: 0.28em; color: #7A5C34; font-weight: 700">WHAT WE DO</span>
@@ -207,21 +250,75 @@ No spam. Your details are only used to arrange your consultation.</p>
 </div>
 <p style="margin: 0; max-width: 380px; color: #5E554B">From a single statement wall to a full villa rebuild, every trade is managed in-house, so the finish matches the render.</p>
 </div>
+<div class="swipe-hint" style="align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: #7A5C34; margin-bottom: -16px">Swipe to see more
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></div>
 <div class="svc-grid">
-<sc-for list="{{services}}" as="s" hint-placeholder-count="5">
+
 <article class="svc-card" style="background: #FFFFFF; display: flex; flex-direction: column; border: 1px solid #E4DCD0">
-<div style="height: 300px; overflow: hidden; background: #1E1A16">
-<img src="{{s.img}}" alt="{{s.alt}}" style="width: 100%; height: 100%; object-fit: cover; display: block">
+<div class="svc-img" style="height: 300px; overflow: hidden; background: #1E1A16">
+<img src="media/bedroom.jpg" alt="Villa master bedroom with timber wall and linear lighting" style="width: 100%; height: 100%; object-fit: cover; display: block">
 </div>
 <div style="padding: 28px; display: flex; flex-direction: column; gap: 12px; flex-grow: 1">
-<span style="font-size: 12px; letter-spacing: 0.2em; color: #7A5C34; font-weight: 700">{{s.num}}</span>
-<h3 class="serif" style="margin: 0; font-size: 30px; line-height: 1.1; font-weight: 500">{{s.title}}</h3>
-<p style="margin: 0; color: #5E554B; font-size: 15px; flex-grow: 1">{{s.line}}</p>
-<a href="#quote" onClick="{{s.pick}}" style="margin-top: 8px; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: #1B1714; font-weight: 700; font-size: 14px; text-decoration: none; border-bottom: 1px solid #1B1714; align-self: flex-start">Get a quote for this
+<span style="font-size: 12px; letter-spacing: 0.2em; color: #7A5C34; font-weight: 700">01</span>
+<h3 class="serif" style="margin: 0; font-size: 30px; line-height: 1.1; font-weight: 500">Villa Renovation</h3>
+<p style="margin: 0; color: #5E554B; font-size: 15px; flex-grow: 1">Full-home transformations: layouts, ceilings, lighting, flooring and finishes, from shell to styled.</p>
+<a href="#quote" data-pick="villa" style="margin-top: 8px; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: #1B1714; font-weight: 700; font-size: 14px; text-decoration: none; border-bottom: 1px solid #1B1714; align-self: flex-start">Get a quote for this
 <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 </div>
 </article>
-</sc-for>
+
+<article class="svc-card" style="background: #FFFFFF; display: flex; flex-direction: column; border: 1px solid #E4DCD0">
+<div class="svc-img" style="height: 300px; overflow: hidden; background: #1E1A16">
+<img src="media/bar.jpg" alt="Apartment coffee bar with marble counter and lit shelving" style="width: 100%; height: 100%; object-fit: cover; display: block">
+</div>
+<div style="padding: 28px; display: flex; flex-direction: column; gap: 12px; flex-grow: 1">
+<span style="font-size: 12px; letter-spacing: 0.2em; color: #7A5C34; font-weight: 700">02</span>
+<h3 class="serif" style="margin: 0; font-size: 30px; line-height: 1.1; font-weight: 500">Apartment Renovation</h3>
+<p style="margin: 0; color: #5E554B; font-size: 15px; flex-grow: 1">Smart, high-end upgrades for apartments and penthouses, planned around building rules and access.</p>
+<a href="#quote" data-pick="apartment" style="margin-top: 8px; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: #1B1714; font-weight: 700; font-size: 14px; text-decoration: none; border-bottom: 1px solid #1B1714; align-self: flex-start">Get a quote for this
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</article>
+
+<article class="svc-card" style="background: #FFFFFF; display: flex; flex-direction: column; border: 1px solid #E4DCD0">
+<div class="svc-img" style="height: 300px; overflow: hidden; background: #1E1A16">
+<img src="media/kitchen.jpg" alt="Kitchen with a waterfall marble island and timber cabinetry" style="width: 100%; height: 100%; object-fit: cover; display: block">
+</div>
+<div style="padding: 28px; display: flex; flex-direction: column; gap: 12px; flex-grow: 1">
+<span style="font-size: 12px; letter-spacing: 0.2em; color: #7A5C34; font-weight: 700">03</span>
+<h3 class="serif" style="margin: 0; font-size: 30px; line-height: 1.1; font-weight: 500">Kitchen Design &amp; Renovation</h3>
+<p style="margin: 0; color: #5E554B; font-size: 15px; flex-grow: 1">Bespoke kitchens with stone islands, handle-less joinery and integrated appliances.</p>
+<a href="#quote" data-pick="kitchen" style="margin-top: 8px; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: #1B1714; font-weight: 700; font-size: 14px; text-decoration: none; border-bottom: 1px solid #1B1714; align-self: flex-start">Get a quote for this
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</article>
+
+<article class="svc-card" style="background: #FFFFFF; display: flex; flex-direction: column; border: 1px solid #E4DCD0">
+<div class="svc-img" style="height: 300px; overflow: hidden; background: #1E1A16">
+<img src="media/panelling.jpg" alt="Fluted walnut wall panelling with concealed LED lighting" style="width: 100%; height: 100%; object-fit: cover; display: block">
+</div>
+<div style="padding: 28px; display: flex; flex-direction: column; gap: 12px; flex-grow: 1">
+<span style="font-size: 12px; letter-spacing: 0.2em; color: #7A5C34; font-weight: 700">04</span>
+<h3 class="serif" style="margin: 0; font-size: 30px; line-height: 1.1; font-weight: 500">Wall Panelling &amp; Joinery</h3>
+<p style="margin: 0; color: #5E554B; font-size: 15px; flex-grow: 1">Fluted timber, marble and fabric walls with concealed lighting, made in our own workshop.</p>
+<a href="#quote" data-pick="panelling" style="margin-top: 8px; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: #1B1714; font-weight: 700; font-size: 14px; text-decoration: none; border-bottom: 1px solid #1B1714; align-self: flex-start">Get a quote for this
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</article>
+
+<article class="svc-card" style="background: #FFFFFF; display: flex; flex-direction: column; border: 1px solid #E4DCD0">
+<div class="svc-img" style="height: 300px; overflow: hidden; background: #1E1A16">
+<img src="media/vanity-poster.jpg" alt="Finished bathroom fit-out with marble wall and timber vanity" style="width: 100%; height: 100%; object-fit: cover; display: block">
+</div>
+<div style="padding: 28px; display: flex; flex-direction: column; gap: 12px; flex-grow: 1">
+<span style="font-size: 12px; letter-spacing: 0.2em; color: #7A5C34; font-weight: 700">05</span>
+<h3 class="serif" style="margin: 0; font-size: 30px; line-height: 1.1; font-weight: 500">Construction &amp; Fit-out</h3>
+<p style="margin: 0; color: #5E554B; font-size: 15px; flex-grow: 1">Civil, MEP and structural works, extensions and complete fit-outs, with approvals handled.</p>
+<a href="#quote" data-pick="construction" style="margin-top: 8px; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: #1B1714; font-weight: 700; font-size: 14px; text-decoration: none; border-bottom: 1px solid #1B1714; align-self: flex-start">Get a quote for this
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</article>
+
 <a href="#quote" style="background: #15120F; color: #F5F1EA; padding: 36px; display: flex; flex-direction: column; justify-content: space-between; gap: 24px; text-decoration: none; min-height: 420px">
 <span style="font-size: 12px; letter-spacing: 0.2em; color: #CDB38A; font-weight: 700">NOT SURE WHERE TO START?</span>
 <span class="serif" style="font-size: 38px; line-height: 1.1">Let a designer walk your space with you. Free, with no obligation.</span>
@@ -233,8 +330,8 @@ No spam. Your details are only used to arrange your consultation.</p>
 </section>
 
 <!-- WORK / VIDEOS -->
-<section id="work" style="padding: 120px 0; scroll-margin-top: 80px">
-<div class="wrap" style="display: flex; flex-direction: column; gap: 56px">
+<section id="work" class="sec" style="padding: 120px 0; scroll-margin-top: 80px">
+<div class="wrap sec-inner" style="display: flex; flex-direction: column; gap: 56px">
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
 <div style="display: flex; flex-direction: column; gap: 16px; max-width: 640px">
 <span style="font-size: 12px; letter-spacing: 0.28em; color: #CDB38A; font-weight: 700">RECENT WORK</span>
@@ -244,28 +341,30 @@ No spam. Your details are only used to arrange your consultation.</p>
 <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.6"></circle></svg>
 More on @b.mansioninteriors</a>
 </div>
+<div class="swipe-hint" style="align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: #CDB38A; margin-bottom: -16px">Swipe to see more
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></div>
 <div class="reel-grid">
 <figure style="margin: 0; display: flex; flex-direction: column; gap: 14px">
 <div style="aspect-ratio: 9 / 16; overflow: hidden; background: #1E1A16">
-<video src="./assets/b28578abce73da77baca23f653ae81e4.mp4" poster="./assets/7b41b0f32c9d0c34f5fab7fbd9767146.jpg" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" aria-label="Marble vanity with backlit mirror" style="width: 100%; height: 100%; object-fit: cover; display: block"></video>
+<video src="media/vanity.mp4" poster="media/vanity-poster.jpg" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" aria-label="Marble vanity with backlit mirror" style="width: 100%; height: 100%; object-fit: cover; display: block"></video>
 </div>
 <figcaption style="font-size: 14px; color: #B5AA9C"><span style="color: #F5F1EA; font-weight: 600">Master bathroom</span> · Book-matched marble, fluted oak vanity</figcaption>
 </figure>
 <figure style="margin: 0; display: flex; flex-direction: column; gap: 14px">
 <div style="aspect-ratio: 9 / 16; overflow: hidden; background: #1E1A16">
-<img src="./assets/5b4e66adbd2a70826b2048554e1cb3a9.jpg" alt="Fluted walnut wall panelling with arched mirror" style="width: 100%; height: 100%; object-fit: cover; display: block">
+<img src="media/panelling.jpg" alt="Fluted walnut wall panelling with arched mirror" style="width: 100%; height: 100%; object-fit: cover; display: block">
 </div>
 <figcaption style="font-size: 14px; color: #B5AA9C"><span style="color: #F5F1EA; font-weight: 600">Wall panelling</span> · Fluted walnut, concealed LED</figcaption>
 </figure>
 <figure style="margin: 0; display: flex; flex-direction: column; gap: 14px">
 <div style="aspect-ratio: 9 / 16; overflow: hidden; background: #1E1A16">
-<video src="./assets/4570ad04c2cee4b92f6f3443e8476f7c.mp4" poster="./assets/1a1deb738528fe0689d1a338b2f6c10b.jpg" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" aria-label="Bedroom with statement marble wall" style="width: 100%; height: 100%; object-fit: cover; display: block"></video>
+<video src="media/marble.mp4" poster="media/marble-poster.jpg" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" aria-label="Bedroom with statement marble wall" style="width: 100%; height: 100%; object-fit: cover; display: block"></video>
 </div>
 <figcaption style="font-size: 14px; color: #B5AA9C"><span style="color: #F5F1EA; font-weight: 600">Master suite</span> · Statement marble feature wall</figcaption>
 </figure>
 <figure style="margin: 0; display: flex; flex-direction: column; gap: 14px">
 <div style="aspect-ratio: 9 / 16; overflow: hidden; background: #1E1A16">
-<img src="./assets/28e5951e40ee6a7a6d2ed86a1f45cd37.jpg" alt="Coffee bar with dark marble counter and lit display shelving" style="width: 100%; height: 100%; object-fit: cover; display: block">
+<img src="media/bar.jpg" alt="Coffee bar with dark marble counter and lit display shelving" style="width: 100%; height: 100%; object-fit: cover; display: block">
 </div>
 <figcaption style="font-size: 14px; color: #B5AA9C"><span style="color: #F5F1EA; font-weight: 600">Villa coffee bar</span> · Grigio marble, smoked-glass joinery</figcaption>
 </figure>
@@ -274,7 +373,7 @@ More on @b.mansioninteriors</a>
 </section>
 
 <!-- PROCESS -->
-<section id="process" style="background: #1E1A16; padding: 120px 0; scroll-margin-top: 80px">
+<section id="process" class="sec" style="background: #1E1A16; padding: 120px 0; scroll-margin-top: 80px">
 <div class="wrap" style="display: flex; flex-direction: column; gap: 64px">
 <div style="display: flex; flex-direction: column; gap: 16px; max-width: 720px">
 <span style="font-size: 12px; letter-spacing: 0.28em; color: #CDB38A; font-weight: 700">HOW IT WORKS</span>
@@ -306,10 +405,10 @@ More on @b.mansioninteriors</a>
 </section>
 
 <!-- WHY -->
-<section style="background: #F5F1EA; color: #1B1714; padding: 120px 0">
+<section class="sec" style="background: #F5F1EA; color: #1B1714; padding: 120px 0">
 <div class="wrap why-grid">
-<div style="aspect-ratio: 4 / 5; overflow: hidden">
-<img src="./assets/8d988ca5fba1e2d5367effa762d2ce92.jpg" alt="Calm master bedroom with timber panelling and linear lighting" style="width: 100%; height: 100%; object-fit: cover; display: block">
+<div class="why-img" style="aspect-ratio: 4 / 5; overflow: hidden">
+<img src="media/bedroom.jpg" alt="Calm master bedroom with timber panelling and linear lighting" style="width: 100%; height: 100%; object-fit: cover; display: block">
 </div>
 <div style="display: flex; flex-direction: column; gap: 32px">
 <span style="font-size: 12px; letter-spacing: 0.28em; color: #7A5C34; font-weight: 700">WHY BILLIONAIRE MANSION</span>
@@ -339,7 +438,7 @@ More on @b.mansioninteriors</a>
 </section>
 
 <!-- PROOF -->
-<section style="background: #EDE7DD; color: #1B1714; padding: 100px 0">
+<section class="sec" style="background: #EDE7DD; color: #1B1714; padding: 100px 0">
 <div class="wrap" style="display: flex; flex-direction: column; gap: 48px">
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
 <h2 class="serif" style="margin: 0; font-size: clamp(34px, 3.6vw, 48px); line-height: 1.1; font-weight: 400; max-width: 620px">Trusted by homeowners across Dubai’s finest communities.</h2>
@@ -367,7 +466,7 @@ More on @b.mansioninteriors</a>
 </section>
 
 <!-- FAQ -->
-<section id="faq" style="background: #F5F1EA; color: #1B1714; padding: 120px 0; scroll-margin-top: 80px">
+<section id="faq" class="sec" style="background: #F5F1EA; color: #1B1714; padding: 120px 0; scroll-margin-top: 80px">
 <div class="wrap faq-grid">
 <div style="display: flex; flex-direction: column; gap: 20px">
 <span style="font-size: 12px; letter-spacing: 0.28em; color: #7A5C34; font-weight: 700">QUESTIONS</span>
@@ -376,24 +475,64 @@ More on @b.mansioninteriors</a>
 <a href="https://wa.me/971529127192?text=Hi%20Billionaire%20Mansion%2C%20I%20would%20like%20a%20free%20design%20consultation." style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; min-height: 48px; color: #1B1714; font-weight: 700; text-decoration: none; border-bottom: 1px solid #1B1714">Ask on WhatsApp</a>
 </div>
 <div style="display: flex; flex-direction: column; border-top: 1px solid #D9D0C3">
-<sc-for list="{{faqs}}" as="f" hint-placeholder-count="5">
+
 <div style="border-bottom: 1px solid #D9D0C3">
-<button type="button" onClick="{{f.toggle}}" aria-expanded="{{f.expanded}}" style="width: 100%; min-height: 72px; background: none; border: 0; padding: 20px 0; display: flex; justify-content: space-between; align-items: center; gap: 24px; text-align: left; cursor: pointer; font: 600 18px Manrope, sans-serif; color: #1B1714">
-<span>{{f.q}}</span>
-<span aria-hidden="true" class="serif" style="font-size: 30px; line-height: 1; color: #7A5C34; min-width: 20px; text-align: center">{{f.sign}}</span>
+<button type="button" class="faq-q" aria-expanded="true" style="width: 100%; min-height: 72px; background: none; border: 0; padding: 20px 0; display: flex; justify-content: space-between; align-items: center; gap: 24px; text-align: left; cursor: pointer; font: 600 18px Manrope, sans-serif; color: #1B1714">
+<span>How much does a villa or kitchen renovation cost?</span>
+<span aria-hidden="true" class="serif" style="font-size: 30px; line-height: 1; color: #7A5C34; min-width: 20px; text-align: center">–</span>
 </button>
-<sc-if value="{{f.open}}" hint-placeholder-val="{{ false }}">
-<p style="margin: 0; padding: 0 48px 24px 0; color: #5E554B; font-size: 16px">{{f.a}}</p>
-</sc-if>
+
+<p class="faq-a" style="margin: 0; padding: 0 48px 24px 0; color: #5E554B; font-size: 16px">Every project is quoted on measured drawings. As a guide, kitchens start from AED 45,000 and full villa renovations from AED 350,000. After your free site visit you receive a fixed, itemised quotation.</p>
+
 </div>
-</sc-for>
+
+<div style="border-bottom: 1px solid #D9D0C3">
+<button type="button" class="faq-q" aria-expanded="false" style="width: 100%; min-height: 72px; background: none; border: 0; padding: 20px 0; display: flex; justify-content: space-between; align-items: center; gap: 24px; text-align: left; cursor: pointer; font: 600 18px Manrope, sans-serif; color: #1B1714">
+<span>How long will my project take?</span>
+<span aria-hidden="true" class="serif" style="font-size: 30px; line-height: 1; color: #7A5C34; min-width: 20px; text-align: center">+</span>
+</button>
+
+<p class="faq-a" hidden style="margin: 0; padding: 0 48px 24px 0; color: #5E554B; font-size: 16px">A kitchen typically takes 4–6 weeks and a full villa 3–5 months, depending on scope and approvals. Your timeline is written into the contract.</p>
+
+</div>
+
+<div style="border-bottom: 1px solid #D9D0C3">
+<button type="button" class="faq-q" aria-expanded="false" style="width: 100%; min-height: 72px; background: none; border: 0; padding: 20px 0; display: flex; justify-content: space-between; align-items: center; gap: 24px; text-align: left; cursor: pointer; font: 600 18px Manrope, sans-serif; color: #1B1714">
+<span>Do you handle building and community approvals?</span>
+<span aria-hidden="true" class="serif" style="font-size: 30px; line-height: 1; color: #7A5C34; min-width: 20px; text-align: center">+</span>
+</button>
+
+<p class="faq-a" hidden style="margin: 0; padding: 0 48px 24px 0; color: #5E554B; font-size: 16px">Yes. We prepare drawings and manage NOCs and authority permits on your behalf.</p>
+
+</div>
+
+<div style="border-bottom: 1px solid #D9D0C3">
+<button type="button" class="faq-q" aria-expanded="false" style="width: 100%; min-height: 72px; background: none; border: 0; padding: 20px 0; display: flex; justify-content: space-between; align-items: center; gap: 24px; text-align: left; cursor: pointer; font: 600 18px Manrope, sans-serif; color: #1B1714">
+<span>Can I live in the property during works?</span>
+<span aria-hidden="true" class="serif" style="font-size: 30px; line-height: 1; color: #7A5C34; min-width: 20px; text-align: center">+</span>
+</button>
+
+<p class="faq-a" hidden style="margin: 0; padding: 0 48px 24px 0; color: #5E554B; font-size: 16px">For partial renovations, often yes. We phase works, seal off areas and keep sites clean. Your designer will advise during the site visit.</p>
+
+</div>
+
+<div style="border-bottom: 1px solid #D9D0C3">
+<button type="button" class="faq-q" aria-expanded="false" style="width: 100%; min-height: 72px; background: none; border: 0; padding: 20px 0; display: flex; justify-content: space-between; align-items: center; gap: 24px; text-align: left; cursor: pointer; font: 600 18px Manrope, sans-serif; color: #1B1714">
+<span>Which areas do you cover?</span>
+<span aria-hidden="true" class="serif" style="font-size: 30px; line-height: 1; color: #7A5C34; min-width: 20px; text-align: center">+</span>
+</button>
+
+<p class="faq-a" hidden style="margin: 0; padding: 0 48px 24px 0; color: #5E554B; font-size: 16px">Dubai, Abu Dhabi, Sharjah and the wider UAE.</p>
+
+</div>
+
 </div>
 </div>
 </section>
 
 <!-- FINAL CTA -->
-<section style="position: relative; overflow: hidden; padding: 140px 0">
-<img src="./assets/5b4e66adbd2a70826b2048554e1cb3a9.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<section class="sec" style="position: relative; overflow: hidden; padding: 140px 0">
+<img src="media/panelling.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
 <div aria-hidden="true" style="position: absolute; inset: 0; background: rgba(16,13,10,0.8)"></div>
 <div class="wrap" style="position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px">
 <span style="font-size: 12px; letter-spacing: 0.28em; color: #CDB38A; font-weight: 700">LIMITED DESIGN SLOTS EACH MONTH</span>
@@ -410,7 +549,7 @@ More on @b.mansioninteriors</a>
 <footer style="border-top: 1px solid rgba(245,241,234,0.08); padding: 48px 0 40px">
 <div class="wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; font-size: 14px; color: #B5AA9C">
 <div style="display: flex; flex-direction: column; gap: 6px">
-<img src="./assets/2c52fdaf080f8900bb292bafacdf7227.png" alt="Billionaire Mansion" style="height: 32px; width: auto; display: block; align-self: flex-start; margin-bottom: 8px">
+<img src="media/logo-white.png" alt="Billionaire Mansion" style="height: 32px; width: auto; display: block; align-self: flex-start; margin-bottom: 8px">
 <span>Office 1204, Bay Square Building 7, Business Bay, Dubai, UAE</span>
 <span>Sat – Thu · 9:00 – 19:00</span>
 </div>
@@ -424,7 +563,7 @@ More on @b.mansioninteriors</a>
 </footer>
 
 <!-- FLOATING WHATSAPP -->
-<div class="hide-sm" style="position: sticky; bottom: 28px; z-index: 30; height: 0; display: flex; justify-content: flex-end; padding-right: 28px">
+<div class="hide-sm wa-float" style="position: sticky; bottom: 28px; z-index: 30; height: 0; display: flex; justify-content: flex-end; padding-right: 28px">
 <a href="https://wa.me/971529127192?text=Hi%20Billionaire%20Mansion%2C%20I%20would%20like%20a%20free%20design%20consultation." aria-label="Chat with us on WhatsApp" style="transform: translateY(-100%); width: 60px; height: 60px; border-radius: 50%; background: #25D366; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(0,0,0,0.35)"><svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.8 1.8 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zm8.4-18.2C18.1 1.3 15.2.1 12 .1 5.5.1.1 5.4.1 12c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.6c1.7.9 3.7 1.4 5.7 1.4 6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.5-8.3z"></path></svg></a>
 </div>
 
@@ -435,92 +574,54 @@ More on @b.mansioninteriors</a>
 </div>
 
 </div>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":6400}}'>
-class Component extends DCLogic {
-  constructor(props) {
-    super(props);
-    this.state = { chosen: [], name: '', phone: '', email: '', city: 'Dubai', budget: '', errors: {}, submitted: false, faqOpen: 0 };
+
+
+<script>
+(function(){
+  var chosen = [];
+  var names = {};
+  document.querySelectorAll('.chip').forEach(function(b){ names[b.dataset.svc] = b.textContent.trim(); });
+  function sync(){
+    document.querySelectorAll('.chip').forEach(function(b){ b.setAttribute('aria-pressed', chosen.indexOf(b.dataset.svc) > -1 ? 'true' : 'false'); });
+    if (chosen.length) showErr('service', false);
   }
-  renderVals() {
-    const s = this.state;
-    const defs = [
-      { id: 'villa', num: '01', short: 'Villa renovation', title: 'Villa Renovation', line: 'Full-home transformations: layouts, ceilings, lighting, flooring and finishes, from shell to styled.', img: './assets/8d988ca5fba1e2d5367effa762d2ce92.jpg', alt: 'Villa master bedroom with timber wall and linear lighting' },
-      { id: 'apartment', num: '02', short: 'Apartment renovation', title: 'Apartment Renovation', line: 'Smart, high-end upgrades for apartments and penthouses, planned around building rules and access.', img: './assets/28e5951e40ee6a7a6d2ed86a1f45cd37.jpg', alt: 'Apartment coffee bar with marble counter and lit shelving' },
-      { id: 'kitchen', num: '03', short: 'Kitchen', title: 'Kitchen Design & Renovation', line: 'Bespoke kitchens with stone islands, handle-less joinery and integrated appliances.', img: './assets/f82c3796fed61b30acb8d2c88356cb97.jpg', alt: 'Kitchen with a waterfall marble island and timber cabinetry' },
-      { id: 'panelling', num: '04', short: 'Wall panelling', title: 'Wall Panelling & Joinery', line: 'Fluted timber, marble and fabric walls with concealed lighting, made in our own workshop.', img: './assets/5b4e66adbd2a70826b2048554e1cb3a9.jpg', alt: 'Fluted walnut wall panelling with concealed LED lighting' },
-      { id: 'construction', num: '05', short: 'Construction', title: 'Construction & Fit-out', line: 'Civil, MEP and structural works, extensions and complete fit-outs, with approvals handled.', img: './assets/7b41b0f32c9d0c34f5fab7fbd9767146.jpg', alt: 'Finished bathroom fit-out with marble wall and timber vanity' }
-    ];
-    const toggle = (id) => {
-      const has = this.state.chosen.includes(id);
-      const chosen = has ? this.state.chosen.filter((x) => x !== id) : [...this.state.chosen, id];
-      this.setState({ chosen, errors: { ...this.state.errors, service: false } });
-    };
-    const services = defs.map((d) => {
-      const selected = s.chosen.includes(d.id);
-      return {
-        ...d,
-        selected,
-        pressed: selected ? 'true' : 'false',
-        chipStyle: selected
-          ? 'background:#15120F;color:#F5F1EA;border:1px solid #15120F'
-          : 'background:#FFFFFF;color:#1B1714;border:1px solid #D9D0C3',
-        toggle: () => toggle(d.id),
-        pick: () => { if (!this.state.chosen.includes(d.id)) toggle(d.id); }
-      };
+  function toggle(id){ var i = chosen.indexOf(id); if (i > -1) chosen.splice(i,1); else chosen.push(id); sync(); }
+  function showErr(k, on){ var el = document.querySelector('[data-err="'+k+'"]'); if (el) el.hidden = !on; }
+  document.querySelectorAll('.chip').forEach(function(b){ b.addEventListener('click', function(){ toggle(b.dataset.svc); }); });
+  document.querySelectorAll('[data-pick]').forEach(function(a){ a.addEventListener('click', function(){ if (chosen.indexOf(a.dataset.pick) < 0) toggle(a.dataset.pick); }); });
+  ['name','phone','email'].forEach(function(k){ var el = document.getElementById('f-'+k); el.addEventListener('input', function(){ showErr(k,false); }); });
+  document.getElementById('leadForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('f-name').value.trim();
+    var phone = document.getElementById('f-phone').value.trim();
+    var email = document.getElementById('f-email').value.trim();
+    var errs = { service: chosen.length === 0, name: name.length < 2, phone: phone.replace(/[^0-9]/g,'').length < 7, email: !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) };
+    var bad = false; Object.keys(errs).forEach(function(k){ showErr(k, errs[k]); if (errs[k]) bad = true; });
+    if (bad) return;
+    var lead = { services: chosen.map(function(id){ return names[id]; }), name: name, phone: phone, email: email,
+      location: document.getElementById('f-city').value, budget: document.getElementById('f-budget').value, submittedAt: new Date().toISOString() };
+    // TODO: send `lead` to your CRM / Google Sheet / webhook here, e.g.
+    // fetch('https://YOUR-WEBHOOK-URL', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(lead) });
+    document.getElementById('tFirst').textContent = name.split(' ')[0];
+    document.getElementById('tList').textContent = lead.services.map(function(s){ return s.toLowerCase(); }).join(', ');
+    document.getElementById('tPhone').textContent = phone;
+    var waText = 'Hi Billionaire Mansion, I\u2019m ' + name + '. I just requested a free consultation for ' + lead.services.map(function(s){ return s.toLowerCase(); }).join(', ') + ' in ' + lead.location + '. My number is ' + phone + '.';
+    document.getElementById('waLead').href = 'https://wa.me/971529127192?text=' + encodeURIComponent(waText);
+    document.getElementById('formState').hidden = true;
+    document.getElementById('thanksState').hidden = false;
+  });
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq-q').forEach(function(o){
+        o.setAttribute('aria-expanded','false'); o.lastElementChild.textContent = '+';
+        o.parentNode.querySelector('.faq-a').hidden = true;
+      });
+      if (!open){ btn.setAttribute('aria-expanded','true'); btn.lastElementChild.textContent = '–'; btn.parentNode.querySelector('.faq-a').hidden = false; }
     });
-    const faqDefs = [
-      { q: 'How much does a villa or kitchen renovation cost?', a: 'Every project is quoted on measured drawings. As a guide, kitchens start from AED 45,000 and full villa renovations from AED 350,000. After your free site visit you receive a fixed, itemised quotation.' },
-      { q: 'How long will my project take?', a: 'A kitchen typically takes 4–6 weeks and a full villa 3–5 months, depending on scope and approvals. Your timeline is written into the contract.' },
-      { q: 'Do you handle building and community approvals?', a: 'Yes. We prepare drawings and manage NOCs and authority permits on your behalf.' },
-      { q: 'Can I live in the property during works?', a: 'For partial renovations, often yes. We phase works, seal off areas and keep sites clean. Your designer will advise during the site visit.' },
-      { q: 'Which areas do you cover?', a: 'Dubai, Abu Dhabi, Sharjah and the wider UAE.' }
-    ];
-    const faqs = faqDefs.map((f, i) => ({
-      ...f,
-      open: s.faqOpen === i,
-      expanded: s.faqOpen === i ? 'true' : 'false',
-      sign: s.faqOpen === i ? '–' : '+',
-      toggle: () => this.setState({ faqOpen: this.state.faqOpen === i ? -1 : i })
-    }));
-    const submit = (e) => {
-      if (e && e.preventDefault) e.preventDefault();
-      const st = this.state;
-      const errors = {
-        service: st.chosen.length === 0,
-        name: st.name.trim().length < 2,
-        phone: st.phone.replace(/[^0-9]/g, '').length < 7,
-        email: !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(st.email.trim())
-      };
-      if (errors.service || errors.name || errors.phone || errors.email) { this.setState({ errors }); return; }
-      this.setState({ errors: {}, submitted: true });
-    };
-    const chosenTitles = defs.filter((d) => s.chosen.includes(d.id)).map((d) => d.short.toLowerCase());
-    const waText = 'Hi Billionaire Mansion, I\u2019m ' + (s.name.trim() || 'interested') + '. I just requested a free consultation for ' + (chosenTitles.join(', ') || 'my home') + ' in ' + s.city + '. My number is ' + s.phone + '.';
-    const waLead = 'https://wa.me/971529127192?text=' + encodeURIComponent(waText);
-    return {
-      services,
-      faqs,
-      name: s.name,
-      phone: s.phone,
-      email: s.email,
-      city: s.city,
-      budget: s.budget,
-      errors: s.errors,
-      submitted: s.submitted,
-      notSubmitted: !s.submitted,
-      firstName: (s.name.trim().split(' ')[0]) || 'there',
-      chosenList: chosenTitles.join(', '),
-      waLead,
-      onName: (e) => this.setState({ name: e.target.value, errors: { ...this.state.errors, name: false } }),
-      onPhone: (e) => this.setState({ phone: e.target.value, errors: { ...this.state.errors, phone: false } }),
-      onEmail: (e) => this.setState({ email: e.target.value, errors: { ...this.state.errors, email: false } }),
-      onCity: (e) => this.setState({ city: e.target.value }),
-      onBudget: (e) => this.setState({ budget: e.target.value }),
-      submit
-    };
-  }
-}
+  });
+})();
 </script>
+
 </body>
 </html>
