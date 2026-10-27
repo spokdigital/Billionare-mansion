@@ -26,10 +26,23 @@
     document.getElementById('tFirst').textContent = name.split(' ')[0];
     document.getElementById('tList').textContent = lead.services.map(function(s){ return s.toLowerCase(); }).join(', ');
     document.getElementById('tPhone').textContent = phone;
-    var waText = 'Hi Billionaire Mansion, I\u2019m ' + name + '. I just requested a free consultation for ' + lead.services.map(function(s){ return s.toLowerCase(); }).join(', ') + ' in ' + lead.location + '. My number is ' + phone + '.';
-    document.getElementById('waLead').href = 'https://wa.me/971529127192?text=' + encodeURIComponent(waText);
+    var budgetSel = document.getElementById('f-budget');
+    var waText = [
+      'Hi Billionaire Mansion, I\u2019d like a free design consultation.',
+      '',
+      '*Name:* ' + name,
+      '*Phone:* ' + phone,
+      '*Email:* ' + email,
+      '*Services:* ' + lead.services.join(', '),
+      '*Location:* ' + lead.location,
+      '*Budget:* ' + budgetSel.options[budgetSel.selectedIndex].text
+    ].join('\n');
+    var waUrl = 'https://wa.me/971529127192?text=' + encodeURIComponent(waText);
+    document.getElementById('waLead').href = waUrl;
     document.getElementById('formState').hidden = true;
     document.getElementById('thanksState').hidden = false;
+    // Hand the full enquiry over to WhatsApp, ready to send
+    window.open(waUrl, '_blank');
   });
   document.querySelectorAll('.faq-q').forEach(function(btn){
     btn.addEventListener('click', function(){
