@@ -1,4 +1,24 @@
 (function(){
+  var leadSent = false;
+function track(evt, params){
+  try { if (window.fbq) fbq('track', evt, params || {}); } catch(e){}
+}
+
+// Phone clicks -> Contact; WhatsApp clicks -> Lead
+document.addEventListener('click', function(e){
+  var a = e.target.closest && e.target.closest('a[href]');
+  if (!a) return;
+  var href = a.getAttribute('href') || '';
+
+  if (href.indexOf('tel:') === 0) {
+    track('Contact', { content_name: 'Phone call click' });
+  } else if (href.indexOf('wa.me/') > -1) {
+    // Skip if this visitor's form Lead was already counted
+    if (a.id === 'waLead' && leadSent) return;
+    track('Lead', { content_name: 'WhatsApp click' });
+  }
+});
+
   var chosen = [];
   var names = {};
   document.querySelectorAll('.chip').forEach(function(b){ names[b.dataset.svc] = b.dataset.name; });
@@ -42,6 +62,12 @@
     document.getElementById('formState').hidden = true;
     document.getElementById('thanksState').hidden = false;
     // Hand the full enquiry over to WhatsApp, ready to send
+     leadSent = true;
+    track('Lead', {
+      content_name: 'Consultation form',
+      content_category: lead.services.join(', '),
+      city: lead.location
+    });
     window.open(waUrl, '_blank');
   });
   document.querySelectorAll('.faq-q').forEach(function(btn){
