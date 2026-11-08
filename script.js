@@ -16,7 +16,7 @@
     } else if (href.indexOf('wa.me/') > -1) {
       // Skip if this visitor's form Contact was already counted
       if (a.id === 'waLead' && leadSent) return;
-      track('Schedule', { content_name: 'WhatsApp click' });
+      track('Lead', { content_name: 'WhatsApp click' });
     }
   });
 
