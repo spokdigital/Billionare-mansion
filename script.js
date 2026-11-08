@@ -107,7 +107,7 @@
       document.getElementById('thanksState').hidden = false;
 
       leadSent = true;
-      track('Contact', { content_name: 'Form submit' });
+      track('Lead', { content_name: 'Form submit' });
     }).catch(function(){
       if (formError) formError.hidden = false;
       if (btn) btn.disabled = false;
